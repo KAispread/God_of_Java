@@ -1,4 +1,4 @@
-package package01;
+package package00;
 
 public class HelloJava {
 
