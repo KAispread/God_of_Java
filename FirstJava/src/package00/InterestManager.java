@@ -7,7 +7,7 @@ public class InterestManager {
 		double amount = 100;
 		
 		for(int day = 1; day < 366; day++) {
-			System.out.println(day + "일째 원금+이자 : " + (double)(manager.calculateAmount(day,amount) + amount));
+			System.out.println("["+day+"]일째 원금+이자 : "+(double)(manager.calculateAmount(day,amount) + amount)+"");
 		}
 	}
 	
