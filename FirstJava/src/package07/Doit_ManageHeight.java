@@ -47,6 +47,7 @@ public class Doit_ManageHeight {
 			count ++;
 			averageClassHeight = (double)sumHeights / (double)count; 
 		}
+		
 		System.out.println("Class No.:"+(classNo + 1)+"");
 		System.out.println("Height Average:"+averageClassHeight+"");
 		System.out.println();
