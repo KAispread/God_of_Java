@@ -4,7 +4,7 @@ public class Doit_ManageStudent {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Doit_Student[] student = new Doit_Student[3];
+		Doit_Student[] student = null;
 		Doit_ManageStudent manage = new Doit_ManageStudent();
 		
 		student = manage.addStudent();
