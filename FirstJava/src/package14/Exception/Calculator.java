@@ -11,6 +11,7 @@ public class Calculator {
 			System.out.println(e.getMessage());
 		}
 	}
+	
 	public void printDivide(double d1, double d2) throws RuntimeException{
 		if(d2 == 0) {
 			throw new RuntimeException("Second value can't be zero");
