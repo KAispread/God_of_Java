@@ -5,6 +5,8 @@ public class UserAnnotationSample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		UserAnnotationSample sample = new UserAnnotationSample();
+		double a = 123.123;
+		System.out.println(a);
 	}
 	
 	@UserAnnotation(number=1)
