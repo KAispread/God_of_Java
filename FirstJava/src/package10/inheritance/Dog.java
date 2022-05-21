@@ -12,17 +12,19 @@ public class Dog extends Animal{
 		this.nameOfThis = nameOfThis;
 	}
 	
-	//Overriding 
+	@Override
 	public void move() {
 		System.out.print("The "+nameOfThis+"");
 		super.move();
 	}
 	
+	@Override
 	public void eatFood() {
 		System.out.print("The "+nameOfThis+"");
 		super.eatFood();
 	}
 	
+	@Override
 	public void attack() {
 		System.out.print("The "+nameOfThis+" that has "+power+" power point");
 		super.attack();
