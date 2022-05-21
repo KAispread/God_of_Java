@@ -17,7 +17,7 @@ public class JavaLangNumber {
 		Integer int1 = Integer.parseInt(value1); 
 		//parseInt 메소드는 int형 기본 자료형을 리턴하지만 Integer,Byte와 같은 클래스들은 리터럴 값을 할당해도 된다.
 		Integer int2 = Integer.valueOf(value2);
-		Integer int3 = 34;
+		//Integer int3 = 34;
 		System.out.println(int1+int2+"7");
 	}
 	
