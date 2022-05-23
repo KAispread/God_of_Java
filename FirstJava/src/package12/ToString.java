@@ -4,7 +4,6 @@ import  package08.MemberDTO;
 public class ToString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ToString thisObject = new ToString();
 		thisObject.toStringMethod2();
 		MemberDTO dto = new MemberDTO("kai", "010931415125");
