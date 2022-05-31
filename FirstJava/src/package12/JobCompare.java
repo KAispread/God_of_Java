@@ -12,8 +12,16 @@ public class JobCompare{
       job2.setName("teacher");
       job2.setSalary(300);
       
-      if(job1 == job2) {
-         System.out.println("It is same object");
+      if(job1.equals(job2)) {
+         System.out.println("Job1 and job2 are different objects");
+      } else {
+         System.out.println("Job1 and job2 are different objects");
+      }
+      String a = "A";
+      String b = new String("A");
+
+      if(a == b) { 
+        System.out.println("a and b are same");
       }
    }
 }

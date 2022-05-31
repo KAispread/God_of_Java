@@ -1,7 +1,19 @@
 package package14;
 
-public class ThrowableSample {
+class ThrowNull extends Exception {
+  public ThrowNull() {
+    super();
+  }
+  public ThrowNull(String message) {
+    super(message);
+  }
+  
+  public String getMessage() {
+    return "Throw Null occured";
+  }
+}
 
+public class ThrowableSample {
 	public static void main(String[] args) {
 		ThrowableSample sample = new ThrowableSample();
 		sample.throwable();
@@ -14,25 +26,11 @@ public class ThrowableSample {
 			if (arrayInt == null) {
 				throw new ThrowNull();
 			}
+			
 		} catch (ThrowNull e) {
 			System.out.println(e.getMessage());
-//			e.printStackTrace();
+			e.printStackTrace();
 			System.out.println(e.toString());
 		}
-	}
-
-}
-
-
-class ThrowNull extends Exception {
-	public ThrowNull() {
-		super();
-	}
-	public ThrowNull(String message) {
-		super(message);
-	}
-	
-	public String getMessage() {
-		return "Throw Null occured";
 	}
 }

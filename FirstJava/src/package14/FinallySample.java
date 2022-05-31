@@ -9,8 +9,12 @@ public class FinallySample {
 	
 	public void finallySample() {
 		int [] intArray = new int[5];
+		int a = 3;
 		try {
 			System.out.println(intArray[5]);
+			if (a == 3) {
+			   
+			}
 		} catch(Exception e) {
 			System.out.println("Array is "+intArray.length+"");
 		} finally {

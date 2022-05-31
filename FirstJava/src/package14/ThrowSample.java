@@ -4,8 +4,10 @@ public class ThrowSample {
 
 	public static void main(String[] args) {
 		ThrowSample sample = new ThrowSample();
+		sample.throwException(13);
+		
 		try {
-			sample.throwException(13);
+		  sample.throwException(13);
 			sample.throwsException(13);
 		} catch (Exception e) {
 			System.out.println("Throw out to the method");
