@@ -31,10 +31,11 @@ public class QueueSample {
 		System.out.println(link);
 		checkLinkedList2(link);
 	}
+	
 	public void checkLinkedList2(LinkedList<String> list) {
-		ListIterator<String> iter = list.listIterator(list.size());
-		while(iter.hasPrevious()) {
-			System.out.print(iter.previous() +" ");
+		Iterator<String> iter = list.descendingIterator();
+		while(iter.hasNext()) {
+			System.out.print(iter.next() +" ");
 		}
 	}
 }
