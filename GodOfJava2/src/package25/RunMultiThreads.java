@@ -18,7 +18,7 @@ public class RunMultiThreads {
 			new Thread(runnable[loop]).start();
 			thread[loop].start();
 			
-		} 
+		}
 		
 		System.out.println("RunMultiThreads.runMultiThread() method is ended");
 	} 
