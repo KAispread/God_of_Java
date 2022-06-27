@@ -75,6 +75,7 @@ public class SocketServerSample {
 				stream.close();
 				client.close();
 				System.out.println("----------");
+				break;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
