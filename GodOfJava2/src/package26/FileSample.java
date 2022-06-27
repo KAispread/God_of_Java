@@ -8,10 +8,12 @@ public class FileSample {
 
    public static void main(String[] args) {
       FileSample sample = new FileSample();
+      
+      
       String pathName = "C:" + File.separator + "godofjava"+ File.separator + "text";
+      String path = "C:\\godofjava\\text.txt";
       String fileName = "test.txt";
       
-      sample.mkDir(pathName);
       sample.createFile(pathName, fileName);
    }
 
@@ -31,7 +33,7 @@ public class FileSample {
       System.out.println(pathName + "is file? = " + file.isFile());
       System.out.println(pathName + "is hidden? = " + file.isHidden());
    }
-
+   
    public void canFileMethods(String pathName) {
       File file = new File(pathName);
       System.out.println(pathName + "is can read? = " + file.canRead());

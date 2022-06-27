@@ -15,8 +15,9 @@ public class FileFilterSample {
 
       try {
          file = new File(pathName);
-         File[] mainFileList = file.listFiles();
-         File[] mainFilenameList = file.listFiles(new JPGFilenameFilter());
+         
+         File [] mainFilenameList = file.listFiles(new JPGFilenameFilter());
+         
          for (File fileList : mainFilenameList) {
             System.out.println("File name = " + fileList.getName());
          }
