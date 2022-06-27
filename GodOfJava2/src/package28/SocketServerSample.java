@@ -13,8 +13,7 @@ public class SocketServerSample {
 
 	public static void main(String[] args) {
 		SocketServerSample sample = new SocketServerSample();
-		sample.startServer();
-		sample.startReplyServer("OK");
+		sample.startReplyServer();
 	}
 	
 	public void startServer() {
@@ -59,28 +58,34 @@ public class SocketServerSample {
 		}
 	}
 	
-	public void startReplyServer(String data) {
-		Socket client = null;
+	public void startReplyServer() {
+		ServerSocket server=null;
+		Socket client=null;
 		try {
-			Thread.sleep(1000);
-			client = new Socket("127.0.0.1",9999);
-			OutputStream oot = client.getOutputStream();
-			BufferedOutputStream out = new BufferedOutputStream(oot);
-			byte[] bytes = data.getBytes();
-			out.write(bytes);
-			System.out.println("Server: send data");
-			out.close();
-			oot.close();
-		} catch(Exception e){
+			server=new ServerSocket(9999);
+			while(true) {
+				System.out.println("Server:Waiting for request.");
+				client=server.accept();
+				System.out.println("Server:Accepted.");
+				OutputStream stream=client.getOutputStream();
+
+				BufferedOutputStream out=new BufferedOutputStream(stream);
+				out.write("OK".getBytes());
+				out.close();
+				stream.close();
+				client.close();
+				System.out.println("----------");
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			if (client != null) {
+			if(server!=null) {
 				try {
-					client.close();
-				} catch(Exception e) {
+					server.close();
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
-			} 
+			}
 		}
 	}
 }
