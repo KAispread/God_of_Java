@@ -17,11 +17,11 @@ public class ManageTextFile {
 	public static void main(String[] args) {
 		ManageTextFile manager = new ManageTextFile();
 		int numberConunt = 10;
-		String fullPath = separator + "godofjava" + separator + "text" + separator + "numbers.text";
+		String fullPath = separator + "godofjava" + separator + "text" + separator + "numbers.c";
 		String Path = separator + "godofjava" + separator + "text";
 		
 		manager.mkDir(Path);
-		manager.readFileWithScanner(fullPath);
+		manager.readFile(fullPath);
 	}
 
 	public void mkDir(String fullPath) {
